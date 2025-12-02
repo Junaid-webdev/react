@@ -1,7 +1,5 @@
 function ToDo(){
-    function callFun(){
-        alert("Function Called")
-    }
+    
     return<>
     <h1>Junaid Quarishi</h1>
     <img src="https://static.vecteezy.com/system/resources/thumbnails/057/068/323/small/single-fresh-red-strawberry-on-table-green-background-food-fruit-sweet-macro-juicy-plant-image-photo.jpg"
@@ -12,6 +10,7 @@ function ToDo(){
         <li>Lorem, ipsum dolor.</li>
         <li>Lorem, ipsum dolor.</li>
     </ul>
+    <h1>Junaid</h1>
     <button onClick={callFun()}></button>
     </>
 }
