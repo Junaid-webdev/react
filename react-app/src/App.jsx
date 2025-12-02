@@ -1,50 +1,33 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-// import  User from './condition'
-import Sum from './props';
-import College from './college';
-import Student from './student';
+import User from "./User";
+import Wrapper from "./wrapper";
+
 
 function App(){
-  // let name = "sameer"
-  // let age = 21;
-  // let email = "junaid@gmail.com";
-  let userObject={
-    name: "Sameer",
-    age: 17,
-    city: "Nagaur",
-    address:"nsndsa",
-    email: "sameer@test.com"
+  return <>
+  <Wrapper>
+  <div>
+   <h1>Hello Everyone</h1>
+</div>
+  </Wrapper>
+  <Wrapper>
+  <div>
+   <h1 style={{ color:"yellow", background:"green" }}>Hello Junaid</h1>
+</div>
+  </Wrapper>
+  <Wrapper>
+  <div>
+   <h1 style={{ color:"white" }}>Hello Admin</h1>
+</div>
+  </Wrapper>
+  <Wrapper>
+  <div>
+   <h1>Hello Users</h1>
+</div>
+  </Wrapper>
 
-  }
-  let userObject1={
-    name: "peter",
-    age: 17,
-    city: "palri jodha",
-    address:"sdfgh",
-    email: "peter@test.com"
-
-  }
-
-  let CollgeName = ['IET','IIT','NIT','MIT','DU'];
-
-  const [student,setStudent]=useState();
-  
-  return<>
-  
- 
-  {/* <Sum name="junaid" age={21} email="junaid@gmail.com"/> */}
-  <College College={CollgeName}/>
-  {student &&<Student name={student}/>}
-  <button onClick={()=>setStudent("Sameer")}>Update Name</button>
-  <Sum user={userObject}/>
-  <Sum user={userObject1}/>
-
-  
+  {/* <User />
+  <User name="sameer" /> */}
   
   </>
 }
-
 export default App;

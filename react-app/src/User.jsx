@@ -1,22 +1,9 @@
-function User(){
-    return (
-        <h4>User File </h4>
-    )
-}
-export function Seting(){
+function User({name="New User"}){
     return <>
-    <h1>Seting</h1>
+  
+    <h3>Hi,{name}</h3>
+    <h3>Hi,{name}</h3>
+    <h3>Hi,{name}</h3>
     </>
 }
-export function Profile(){
-    return <>
-    <h1>Profile</h1>
-    </>
-}
-export function Name(){
-    return <>
-    <h1>Junaid</h1>
-    </>
-}
-export const UserKey = "@#$E%##";
 export default User;
