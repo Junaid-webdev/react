@@ -1,0 +1,50 @@
+warning: in the working copy of 'react-app/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/react-app/src/App.jsx b/react-app/src/App.jsx[m
+[1mindex f7bdb39..a073eb5 100644[m
+[1m--- a/react-app/src/App.jsx[m
+[1m+++ b/react-app/src/App.jsx[m
+[36m@@ -12,9 +12,9 @@[m [mfunction App(){[m
+   let userObject={[m
+     name: "Sameer",[m
+     age: 17,[m
+[31m-    City: "Nagaur",[m
+[31m-    Address:"nsndsa",[m
+[31m-    Email: "sameer@test.com"[m
+[32m+[m[32m    city: "Nagaur",[m
+[32m+[m[32m    address:"nsndsa",[m
+[32m+[m[32m    email: "sameer@test.com"[m
+ [m
+   }[m
+   return<>[m
+[36m@@ -22,7 +22,7 @@[m [mfunction App(){[m
+  [m
+ [m
+   {/* <Sum name="junaid" age={21} email="junaid@gmail.com"/> */}[m
+[31m-  {/* <Sum user={userObject}/> */}[m
+[32m+[m[32m  <Sum user={userObject}/>[m
+   [m
+   </>[m
+ }[m
+[1mdiff --git a/react-app/src/props.jsx b/react-app/src/props.jsx[m
+[1mindex e50d7f4..bdaf13c 100644[m
+[1m--- a/react-app/src/props.jsx[m
+[1m+++ b/react-app/src/props.jsx[m
+[36m@@ -1,11 +1,14 @@[m
+[31m-function Sum({name,age,email}){[m
+[32m+[m[32mfunction Sum({user}){[m
+     // console.log({name,age});[m
+     return <>[m
+ [m
+     [m
+[31m-    <h1>Name:{name}</h1>[m
+[31m-    <h1>Email:{email}</h1>[m
+[31m-    <h2>Age:{age}</h2>[m
+[32m+[m[32m    <h6>{user.name}</h6>[m
+[32m+[m[32m    <h6>{user.email}</h6>[m
+[32m+[m[32m    <h6>{user.address}</h6>[m
+[32m+[m[32m    <h6>{user.city}</h6>[m
+[32m+[m[32m    <h6>{user.age}</h6>[m
+[32m+[m
+     [m
+     </>[m
+ }[m

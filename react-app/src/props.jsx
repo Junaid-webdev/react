@@ -1,11 +1,15 @@
-function Sum({name,age,email}){
+function Sum({user}){
     // console.log({name,age});
+   
     return <>
 
     
-    <h1>Name:{name}</h1>
-    <h1>Email:{email}</h1>
-    <h2>Age:{age}</h2>
+    <h6>{user.name}</h6>
+    <h6>{user.email}</h6>
+    <h6>{user.address}</h6>
+    <h6>{user.city}</h6>
+    <h6>{user.age}</h6>
+
     
     </>
 }
