@@ -1,16 +1,28 @@
 import { useState } from "react";
-import User from "./User";
-import Wrapper from "./wrapper";
+
 
 function App(){
-  const [val,setVal]=useState();
-
+const [name,setName]=useState()
+const [password,setPassword]=useState()
+const [email,setEmail]=useState()
   return <>
+  <h1>Controller Components</h1>
+    <form action="" method="get">
+      <input type="text" value={name} onChange={(event)=>setName(event.target.value)} placeholder="Enter Name" />
+      <br /> <br />
+     
+      <input type="password" value={password} onChange={(event)=>setPassword(event.target.value)} placeholder="Enter Password" />
+      <br /> <br />
+     
+      <input type="email" value={email} onChange={(event)=>setEmail(event.target.value)}  placeholder="Enter Email" />
 
-    <h1>Get Input Field</h1>
-    <input value={val} type="text"onChange={(event)=>setVal(event.target.value)} placeholder="Enter Your Name "/>
-    <h4>{val}</h4>
-    <button onClick={()=>setVal("")}>Clear Value</button>
+      <br /> <br />
+     <button>Submit</button>
+     <button onClick={()=>{setEmail('');setName('');}}>Clear</button>
+      <h3>{name}</h3>
+      <h3>{password}</h3>
+      <h3>{email}</h3>
+    </form>
   </>
 }
 export default App;
