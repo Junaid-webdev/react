@@ -1,28 +1,47 @@
 import { useState } from "react";
+import Skills from "./checkbox";
+import Radio from "./radiobtn";
+import Loop from "./loop";
+import getUsresData from "./api";
 
 
 function App(){
-const [name,setName]=useState()
-const [password,setPassword]=useState()
-const [email,setEmail]=useState()
-  return <>
-  <h1>Controller Components</h1>
-    <form action="" method="get">
-      <input type="text" value={name} onChange={(event)=>setName(event.target.value)} placeholder="Enter Name" />
-      <br /> <br />
-     
-      <input type="password" value={password} onChange={(event)=>setPassword(event.target.value)} placeholder="Enter Password" />
-      <br /> <br />
-     
-      <input type="email" value={email} onChange={(event)=>setEmail(event.target.value)}  placeholder="Enter Email" />
+//  const userData = [
+//         {
+//             name: "Junaid",
+//             email: "junaid@test.com",  
+//             age: 21,
+//             id: 1
+//         },
+//         {
+//             name: "sameer",
+//             email: "sameer@test.com",
+//             age: 17,
+//             id: 2
+//         },
+//         {
+//             name: "peeter",
+//             email: "peeter@test.com",
+//             age: 37,
+//             id: 3
+//         },
 
-      <br /> <br />
-     <button>Submit</button>
-     <button onClick={()=>{setEmail('');setName('');}}>Clear</button>
-      <h3>{name}</h3>
-      <h3>{password}</h3>
-      <h3>{email}</h3>
-    </form>
+//     ]
+
+  return <>
+ {/* <h2>Handle Checkbox in React Js</h2> */}
+ {/* <Skills />/ */}
+ {/* <Radio/> */}
+{
+//  userData.map((user)=>(
+//   <div key={user.id}>
+//     <Loop user={user}/>
+//   </div>
+//  ))
+<GetUsresData/>
+}
+ 
+
   </>
 }
 export default App;
