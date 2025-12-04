@@ -14,13 +14,21 @@ const Counter = ({count,data})=>{
 
     useEffect(()=>{
   handelCounter();
-
+    console.log("hello");
+    
     },[])
 
     useEffect(()=>{
         handleData();
     },[data])
   
+    useEffect(()=>{
+        return ()=>{
+
+            console.log("This page is hide");
+            
+        }
+    },[])
 return<>
 
 <h3>Counter Components{count}</h3>

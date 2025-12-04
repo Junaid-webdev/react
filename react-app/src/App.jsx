@@ -1,20 +1,89 @@
-// import { useEffect, useState } from "react";
-import { useState } from "react";
-import Counter from "./hook";
-import CallOnce from "./useeffect";
 
 
 function App(){
 
-  const [count,setCount]=useState(0);
-  const [data,setData]=useState(0)
+
+
   return <>
-  
-{/* <CallOnce/> */}
-  <Counter count={count} data={data}/>
-  <button onClick={()=>setCount(count+1)}>Counter</button>
-  <button onClick={()=>setData(data+1)}>Data</button>
+  <p>React in inline css style</p>
+  <h3 style={{ color:"red" }}>Student Info </h3>
+  <div style={{ display:"flex", flexWrap:"wrap",  }}>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div style={{  border:"1px solid #cccccc3b", width:"200px",boxShadow:"1px 2px 3px 0px #cccccc3b",  }}>
+    <img style={{ width:"200px" }} src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png" alt="" />
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+  </div>
   </>
 }
-
 export default App;
