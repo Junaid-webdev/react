@@ -4,9 +4,9 @@ return<>
 <div>
   <h3>Student</h3>
                 {
-                    student.map((student)=>{
+                    student.map((student,index)=>{
                         return(
-                        <ul>
+                        <ul key={index}>
                             <li>Name:{student.name}</li>
                         </ul>
                         )
