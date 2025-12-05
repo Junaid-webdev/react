@@ -1,162 +1,141 @@
-import React, { useState } from "react";
-import Form from "./form";
+import './css/style.css';
 import "./App.css";
 
 
 function App() {
-  const [cardstyle,setCardstyle]=useState({
-   border: "1px solid #cccccc3b",
-              width: "200px",
-              boxShadow: "1px 2px 3px 0px #cccccc3b",
-              margin: "0px",
-});
+ return <>
+ 
+ <h1 className='heading'>External Css</h1>
+ <div className='container'>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ <div className='user-card'> 
+  <div>
+    <img className='img-style' src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-cartoon-cute-little-boy-student-giving-isolated-with-transparent-background-png-image_20720809.png" alt="" />
+  </div>
+  <div className='text-wrap'>
+    <h4>Sameer</h4>
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+ </div>
+ </div>
+ </>
 
-const updateTheme = (bgColor,textColor)=>{
-setCardstyle({...cardstyle,backgroundColor:bgColor})
-setTextColor(textColor)
-}
-
-const [textColor,setTextColor]=useState('black');
-const [grid,setGrid]=useState(true)
-  return (
-    <>
-      <div>
-        <p>React in inline css style</p>
-        <h3 style={{ color: "red" }}>Student Info </h3>
-        <button onClick={()=>updateTheme('red','white')}>Gray Theme</button>
-        <button onClick={()=>updateTheme('yellow','white')}>Defalut Theme </button>
-        <button onClick={()=>setGrid(!grid)}>Toggle Grid </button>
-        <div style={{ display: grid?'flex':'block', gap:"20px", flexWrap: "wrap" }}>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div style={ cardstyle}>
-            <img
-              style={{ width: "200px" }}
-              src="https://png.pngtree.com/png-clipart/20220615/original/pngtree-kid-student-back-to-school-in-uniform-wear-backpack-png-image_8043401.png"
-              alt=""
-            />
-            <h4 style={{ color:textColor }}>Sameer</h4>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
+  }
 
 export default App;
