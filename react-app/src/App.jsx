@@ -1,26 +1,25 @@
 import './css/style.css';
 import "./App.css";
+import styled from 'styled-components';
 import Child from './child';
 
 
 function App() {
+  const Heading = styled.h3 `color:red; border:1px solid #ddd; `
+  const Btn = styled.button `
+  pdding: 10px;
+  border:none;
+  background:red;
+  color:white;
+  cursor:pointer;
+  margin:10px;
+  width:100px;
+  height100px;
+  `
  return <>
-<h1>Style With css Modules in React js</h1>
-<div style={{ display:"flex",flexWrap:"wrap" }}>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-<Child/>
-</div>
+
+<Heading>Hello</Heading>
+<Btn>Login</Btn>
  </>
 
   }
