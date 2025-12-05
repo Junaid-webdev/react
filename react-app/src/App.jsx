@@ -9,32 +9,47 @@ import { useRef } from 'react';
 
 
 function App() {
-  const inputhandler = ()=>{
-    console.log(inputController); 
-    inputController.current.focus();
-    inputController.current.style.color='red';
+
+
+  // Ref Use Const//
+  const nameRef=useRef();
+  const passwordRef=useRef()
+
+
+  const handleForm =(event)=>{
+  event.preventDefault();
+   const user = document.querySelector('#name').value;
+   const password  = document.querySelector('#password').value;
+     console.log(user,password);
+  }
+  const handleFormRef=(event)=>{
+    event.preventDefault();
+    const user=nameRef.current.value;
+    const password=passwordRef.current.value;
+    console.log("handleFormRef",user,password);
     
   }
-  const h1Ref = useRef(null);
-  const inputController=useRef(null);
-  const togglehandler = ()=>{
-  if(  inputController.current.style.display!='none'){
-    inputController.current.style.display='none'
-  }else{
-    inputController.current.style.display='inline'
-  }
-  }
-  const h1handler = ()=>{
-    h1Ref.current.style.color='yellow';
-  }
  return <>
- <h3>Useref</h3>
- <button onClick={togglehandler}>Toggle</button>
- <input ref={inputController} type="text" placeholder='Enter Your Name' />
- <button onClick={inputhandler}>Click</button>
+ <h3>Uncontrolled Component</h3>
+ <form action="" onSubmit={handleForm}>
+  <input type="text"  id="name" placeholder='Enter Your Name' />
+  <br /><br />
+  <input type="password"  id='password' placeholder='Enter Your Password' />
+  <button>
+    Submit
+  </button>
+ </form>
 
- <h1 ref={h1Ref}>Hello</h1>
- <button onClick={h1handler}>Handler</button>
+ <hr />
+ <h3>Uncontrolled Component with useRef</h3>
+ <form action="" onSubmit={handleFormRef}>
+  <input type="text" ref={nameRef} id="nameRef" placeholder='Enter Your Name' />
+  <br /><br />
+  <input type="password" ref={passwordRef} id='passwordRef' placeholder='Enter Your Password' />
+  <button>
+    Submit with Ref
+  </button>
+ </form>
  </>
 
   }
