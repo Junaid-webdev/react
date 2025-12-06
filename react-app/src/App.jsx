@@ -1,24 +1,30 @@
-import { useState, useTransition } from "react";
+import { useState } from "react";
 
 
 function App(){
-const [pending,startTransition] = useTransition();
-
-const handleBtn = async()=>{
-startTransition(async()=>{
-    
- await new Promise(res=>setTimeout(res,5000))
-})
-
+const [users,setUsers]=useState([]);
+const [user,setUser]=useState('');
+const handleAddUser = ()=>{
+setUsers([...users,user]);
 }
+const total = users.length;
+const last = users[users.length-1];
+const unique = [...new Set(users)].length;
+
   return<>
-  <h2>useTransition Hook in react js</h2>
+  <h1>Drived State in React js</h1>
+
+  <h2>Total User :{total}</h2>
+  <h2>Last User :{last}</h2>
+  <h2>Unique Total User :{unique}</h2>
+
+  <input type="text" onChange={(event)=>setUser(event.target.value)} placeholder="Add New User" />
+  <button onClick={handleAddUser}>Add User</button>
   {
-    pending?
-    <img style={{ width:"100px" }} src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" alt="" />
-    :null
+    users.map((item,index)=>(
+      <h4 key={index}>{item}</h4>
+    ))
   }
-  <button disabled={pending} onClick={handleBtn}>Click</button>
   </>
 }
 export default App;
