@@ -1,29 +1,17 @@
-import { useFormStatus } from "react-dom";
+import { useState } from "react";
+
 
 function App(){
+const [pending,setpending]=useState(false);
 
-  const handleSubmit= async()=>{
-   await new Promise(Response=>setTimeout(Response,3000));
-    console.log("submit");
-    
-  }
-   function CoustmoreForm(){
-
-    const {pending} = useFormStatus();
-
-    return<>
-    <input type="text" placeholder="Enter Name"/>
-    <br /><br />
-    <input type="text" placeholder="Enter Password" />
-    <br /><br />
-    <button disabled={pending}>{pending?'submiting...':'Submit'}</button>
-    </> 
-   }
+const handleBtn = async()=>{
+  setpending(true);
+ await new Promise(res=>setTimeout(res,2000))
+ setpending(false) 
+}
   return<>
-  <h2>useFomrStatus Hook in react</h2>
-  <form action={handleSubmit}>
-    <CoustmoreForm/>
-  </form>
+  <h2>useTransition Hook in react js</h2>
+  <button disabled={pending} onClick={handleBtn}>Click</button>
   </>
 }
 export default App;
