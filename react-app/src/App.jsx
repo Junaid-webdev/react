@@ -1,42 +1,38 @@
-import { useActionState } from "react";
+import { useId } from "react";
 
 
 function App(){
 
-  
-  const handleSubmit= async(previous,formData)=>{
-    let name = formData.get('name');
-    let password = formData.get('password') 
-    await new Promise((res=>setTimeout(res,3000)))
-    //  console.log("handlesubmit called",name,password);
-     if(name && password){
-      return {message:"Data Submitted",name,password}
-     }else{
-      return {error:"Failed to submit",name,password}
-     }
-  }
+  return <>
+  <h1>useId Hook</h1>
+  <User/>
+  <User/>
+ 
+  </>
+}
 
-  const [data,action,pending]=useActionState(handleSubmit,undefined)
-console.log(data);
-  return<>
-  <h2>useActionState Hook</h2>
-  <form action={action}>
-    <input type="text" defaultValue={data?.name} name="name" placeholder="Enter Name" />
-    <br /><br />
-    <input type="text" defaultValue={data?.password}  name="password" placeholder="Enter Password"/>
-    <br /><br />
-    <button disabled={pending}>Submit Data</button>
-    <br />
-   
+
+function User(){
+const name = useId();
+const password = useId();
+const terms = useId();
+const skills = useId();
+  return <>
+  
+  <form action="">
+    <label htmlFor={name}>Enter User Name:  </label>
+      <input type="text" id={name} placeholder="Enter Your Name" />
+      <br /><br />
+      <label htmlFor={password}>Enter Password </label>
+      <input type="text" id={password} placeholder="Enter Password" />
+      <br /><br />
+      <label htmlFor={terms}>Enter Trems </label>
+      <input type="text" id={terms} placeholder="Enter trems" />
+      <br /><br />
+      <label htmlFor={skills}>Trems and Condition  </label>
+      <input type="checkbox" id={skills} placeholder="Enter skills" />
   </form>
-   {
-      data?.error  && <span style={{ color:"red" }}>{data.error}</span>
-    }
-    {
-      data?.message && <span style={{ color:"green" }}>{data.message}</span>
-    }
-    <h3>Name:{data?.name}</h3> 
-    <h3>Email:{data?.password}</h3>
+
   </>
 }
 export default App;
