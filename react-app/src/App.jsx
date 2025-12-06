@@ -1,18 +1,29 @@
-import { useRef } from "react"
-import UserInput from "./alert";
+import { useFormStatus } from "react-dom";
 
 function App(){
-const   inputRef = useRef(null)
-const updateInput = ()=>{
-inputRef.current.value=1000;
-inputRef.current.focus();
-inputRef.current.style.color="red";
-  
-}
+
+  const handleSubmit= async()=>{
+   await new Promise(Response=>setTimeout(Response,3000));
+    console.log("submit");
+    
+  }
+   function CoustmoreForm(){
+
+    const {pending} = useFormStatus();
+
+    return<>
+    <input type="text" placeholder="Enter Name"/>
+    <br /><br />
+    <input type="text" placeholder="Enter Password" />
+    <br /><br />
+    <button disabled={pending}>{pending?'submiting...':'Submit'}</button>
+    </> 
+   }
   return<>
-  <h3>Forwerd Ref</h3>
-    <UserInput ref={inputRef}/>
-  <button onClick={updateInput}>Update INput Field</button>
+  <h2>useFomrStatus Hook in react</h2>
+  <form action={handleSubmit}>
+    <CoustmoreForm/>
+  </form>
   </>
 }
 export default App;
