@@ -1,45 +1,42 @@
-import { useState } from "react";
+import { useActionState } from "react";
+
 
 function App(){
-const [data,setData]=useState([
-  'anil','sam','peeter','junaid','quraishi'
-])
 
-const [dataDetails,setDataDetailes]=useState([
-  {name:"anil ", age:'21',},
-  {name:"sameer ", age:'17',},
-  {name:"junaid ", age:'21',},
-  {name:"tanveer ", age:'17',},
-])
+  
+  const handleSubmit= async(previous,formData)=>{
+    let name = formData.get('name');
+    let password = formData.get('password') 
+    await new Promise((res=>setTimeout(res,3000)))
+    //  console.log("handlesubmit called",name,password);
+     if(name && password){
+      return {message:"Data Submitted",name,password}
+     }else{
+      return {error:"Failed to submit",name,password}
+     }
+  }
 
-const handlerUser = (name)=>{
- data[data.length-1]=name;
-setData([...data]) 
-}
-
-const handleAge=(age)=>{
-
-  dataDetails[dataDetails.length-1].age=age;
-  setDataDetailes([...dataDetails])
-}
+  const [data,action,pending]=useActionState(handleSubmit,undefined)
+console.log(data);
   return<>
-  <h3>Updating Array in State</h3>
-  <input type="text" placeholder="Enter Your Name"  onChange={(e)=>handlerUser(e.target.value)}  />
-  <button onClick={()=>setData("Anil Sidhu")}>Update Name</button>
-
-  {
-    data.map((item,index)=>(
-      <h2 key={index}>{item}</h2>
-    ))
-  }
-  <hr />
-  <input type="text" placeholder="Enter last user age" onChange={(e)=>handleAge(e.target.value)} />
-  {
-    dataDetails.map((item,index)=>(
-      <h2 key={index}>{item.name},{item.age}</h2>
-
-    ))
-  }
+  <h2>useActionState Hook</h2>
+  <form action={action}>
+    <input type="text" defaultValue={data?.name} name="name" placeholder="Enter Name" />
+    <br /><br />
+    <input type="text" defaultValue={data?.password}  name="password" placeholder="Enter Password"/>
+    <br /><br />
+    <button disabled={pending}>Submit Data</button>
+    <br />
+   
+  </form>
+   {
+      data?.error  && <span style={{ color:"red" }}>{data.error}</span>
+    }
+    {
+      data?.message && <span style={{ color:"green" }}>{data.message}</span>
+    }
+    <h3>Name:{data?.name}</h3> 
+    <h3>Email:{data?.password}</h3>
   </>
 }
 export default App;
