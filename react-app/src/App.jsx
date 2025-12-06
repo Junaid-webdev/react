@@ -1,30 +1,13 @@
 import { useState } from "react";
-
+import AddUser from "./Adduser";
+import DisplayUser from "./Display";
 
 function App(){
-const [users,setUsers]=useState([]);
 const [user,setUser]=useState('');
-const handleAddUser = ()=>{
-setUsers([...users,user]);
-}
-const total = users.length;
-const last = users[users.length-1];
-const unique = [...new Set(users)].length;
-
   return<>
-  <h1>Drived State in React js</h1>
-
-  <h2>Total User :{total}</h2>
-  <h2>Last User :{last}</h2>
-  <h2>Unique Total User :{unique}</h2>
-
-  <input type="text" onChange={(event)=>setUser(event.target.value)} placeholder="Add New User" />
-  <button onClick={handleAddUser}>Add User</button>
-  {
-    users.map((item,index)=>(
-      <h4 key={index}>{item}</h4>
-    ))
-  }
+  <h3>Lifting State Up</h3>
+  <AddUser setUser={setUser}/>
+    <DisplayUser user={user}/>
   </>
 }
 export default App;
