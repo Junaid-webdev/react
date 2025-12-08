@@ -1,28 +1,30 @@
-import { useState } from "react";
-import College from "./College1";
-import { SubjectContext } from "./ContextData";
+import useToggle from "./toggle";
 
 function App(){
 
-  const [subject,setSubject]=useState('')
+const [value,toggleValue]=useToggle(true);
+const [data,setData]=useToggle()
+console.log(value);
 
-  return <div style={{ backgroundColor:"yellow", padding:"20px", }}>
-    <select value={subject} onChange={(e)=>setSubject(e.target.value)}>
-      <option value="">Select Subject </option>
-      <option value="Math">Math</option>
-      <option value="English">English</option>
-      <option value="Hindi">Hindi</option>
-      <option value="History">History</option>
-    </select>
- <SubjectContext.Provider value={subject}>
-   <h2>Context API</h2>
-  <College/>
- </SubjectContext.Provider>
- <br />
- <button onClick={()=>setSubject('')}>Clear Subject</button>
-</div>
+return<>
 
+<button onClick={toggleValue}>Toggle Heading</button>
+<button onClick={()=>toggleValue(true)}>Show Heading</button>
+<button onClick={()=>toggleValue(false)}>Hide Heading</button>
 
- 
+{
+  value? <h2>Custom Hook</h2>:null
 }
-export default App;
+<hr />
+
+<button onClick={setData}>Toggle Heading</button>
+<button onClick={()=>setData(true)}>Show Heading</button>
+<button onClick={()=>setData(false)}>Hide Heading</button>
+
+{
+  data? <h2>Second Heading </h2>:null
+}
+</>
+
+}
+export  default App;
